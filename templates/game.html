@@ -11,15 +11,18 @@
         <div class="galviene"><!--virsraksts un izvēlne-->
             <h1>Atmiņas spēle</h1>
             <ul>
-                <li>Sākums</li>
-                <li>Spēle</li>
-                <li>Tops</li>
-                <li>Par</li>
+                <li><a href="index.html">Sākums</a></li>
+                <li><a href="game.html">Spēle</a></li>
+                <li><a href="top.html">Tops</a></li>
+                <li><a href="about.html">Par</a></li>
             </ul>
 
         </div><!--aizver virsraksts un izvēlne-->
         <div class="saturs"><!--saturs-->
-            <div class="speles_lauk"><!--speles laukums-->
+            <div class="hud">
+                <p><b>Spēlētājs:</b> <span id="vardsHUD"></span></p>
+                <p><b>Klikšķi:</b> <span id="klikski">0</span> &nbsp; | &nbsp;<b>Laiks:</b> <span id="laiks">00:00</span></p>
+
                 <div class="bloks">
                     <div>😀</div>
                 </div>
@@ -61,6 +64,7 @@
         </div><!--aizver saturs-->
 
     </div><!--aizver pelekais laukums-->
+    <script src="spele.js"></script>
     
 </body>
 </html> 

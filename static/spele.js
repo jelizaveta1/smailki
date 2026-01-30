@@ -97,17 +97,17 @@ function veiktGajienu(bloks, emoji) {
             atvertiLaukumi.push(pirmail.otrais);
             pedejieDivi = [];
 
-            //parbauda vai spēle pabeigta (visi laukumi atvērti)
+             //parbauda vai spēle pabeigta (visi laukumi atvērti)
             if (atvertiLaukumi.length === laukumiSajaukti.length) {
                 stopTimer();
-            //parāda rezultātu
-            setTimeout(() =>
-            alert('Apsveicu, ${vards}!))
-          
+                //parāda rezultātu
+                setTimeout(() => {
+                    alert(`Apsveicu, ${vards}! \nKlikski: ${klikski}\nLaiks: ${formatTime(laiks)}`);
+                    //padodam rezultātu uz TOP'a lapu (db vēl neko nesaglabā)
+                    document.location = `/tops#${encodeURIComponent(vards)},${klikski},${laiks}`;
 
-            //padodam rezultātu uz TOP' a lapu (db vēl neko nesaglāba)
-            document.location = '/ tops#${encodeURIComponent(vards)}, $
-
+                }, 300);
+            }
         }
     }
 }
