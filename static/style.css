@@ -1,68 +1,101 @@
+:root {
+--galvena-krasa: #4A90E2;
+--fon-krasa: #F5F5F5;
+--kartite-krasa: #FFFFFF;
+--teksts-krasa: #333333;
+--akcents: #F5A623;
+--success: #4CAF50;
+}
+
 .ietvars {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    background: rgb(180, 178, 178);
+max-width: 960px;
+margin: 30px auto;
+padding: 20px 25px; /* 10-15px + nedaudz vairāk elegances */
+background-color: var(--fon-krasa);
+border-radius: 12px;
+box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: var(--teksts-krasa);
+min-height: 85vh;
 }
 
-h1 {
-    text-align: center;
-    background: rgb(152, 198, 241);
-    color: rgb(2, 22, 109);
+/* Galvene */
+.galviene h1 {
+color: var(--galvena-krasa);
+text-align: center;
+margin-bottom: 8px;
 }
 
-ul {
-    text-align: center;
-    padding: 0px;
+.galviene ul {
+list-style: none;
+display: flex;
+justify-content: center;
+gap: 25px;
+padding: 0;
+margin: 20px 0;
 }
 
-li {
-    display: inline-block;
+.galviene ul li a {
+color: var(--galvena-krasa);
+text-decoration: none;
+padding: 8px 16px;
+border-radius: 6px;
+transition: all 0.3s;
 }
 
+.galviene ul li a:hover {
+background: linear-gradient(45deg, var(--galvena-krasa), var(--akcents));
+color: white;
+transform: translateY(-2px);
+}
+
+/* Spēles laukums */
 .speles_lauk {
-    background: black;
-    width: 520px;
-    justify-content: center;
-    margin: auto;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
+display: grid;
+grid-template-columns: repeat(4, 110px);
+gap: 16px;
+justify-content: center;
+margin: 30px auto;
+padding: 20px;
+background: rgba(255,255,255,0.6);
+border-radius: 12px;
 }
 
 .bloks {
-    background: red;
-    width: 100px;
-    height: 100px;
-    align-items: center;
-    justify-content: center;
-    margin: 5px;
-    font-size: 45px;
-    display: flex;
-    border-radius: 5px;
+width: 110px;
+height: 110px;
+background-color: var(--kartite-krasa);
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 3rem;
+cursor: pointer;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+transition: all 0.4s ease;
+user-select: none;
 }
 
-a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    background-color: #007bff;
-    color: white;
-    border: 2px solid #0056b3;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.2s;
+.bloks.atverts {
+background: linear-gradient(135deg, #A8E6CF, #DCE775, #FF8C94);
+color: white;
+transform: rotateY(15deg);
+box-shadow: 0 6px 14px rgba(0,0,0,0.2);
 }
 
-a:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
+.bloks:hover:not(.atverts) {
+transform: scale(1.05);
 }
 
-a:active {
-    background-color: #007bff;
-    color: rgb(84, 236, 148);
-    transform: scale(1.05);
+/* HUD */
+.hud {
+text-align: center;
+font-size: 1.3rem;
+margin: 15px 0;
+font-weight: 600;
+}
+
+#vardsHUD {
+color: var(--galvena-krasa);
+font-size: 1.6rem;
 }
